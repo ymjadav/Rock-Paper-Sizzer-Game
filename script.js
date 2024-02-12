@@ -43,7 +43,7 @@ const playGame = (userChoice) => {
     if (userChoice === "rock") {
       userWin = compChoice === "paper" ? false : true;
     } else if (userChoice === "paper") {
-      userWin = compChoice === "scissors" ? false : true;
+      userWin = compChoice === "sizzer" ? false : true;
     } else {
       userWin = compChoice === "rock" ? false : true;
     }
