@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Games World</title>
+  </head>
+
+  <body class="bg-white">
+    <nav class="bg-black p-4 flex justify-between items-center">
+      <div class="items-center">
+        <span class="text-white text-2xl font-semibold" id="logo"
+          >Games World</span
+        >
+      </div>
+      <div>
+        <span class="text-white text-lg font-semibold"
+          >Welcome To The Game World...</span
+        >
+      </div>
+      <div class="flex items-center">
+        <a
+          href="#"
+          class="text-black bg-white border border-black py-1 px-4 rounded mr-4 ml-4"
+          id="mode"
+          >Theme</a
+        >
+      </div>
+    </nav>
+    <div class="text-center">
+      <h1 class="bg-blue-900 text-white h-16 text-4xl pt-3">Rock Paper Scissors</h1>
+      <div class="flex justify-center items-center gap-12 mt-20">
+        <div class="h-44 w-44 rounded-full flex justify-center items-center hover:bg-blue-700 cursor-pointer" id="rock">
+          <img src="/image/rock.png" class ="h-36 w-36 object-cover rounded-full"/>
+        </div>
+        <div class="h-44 w-44 rounded-full flex justify-center items-center hover:bg-blue-700 cursor-pointer" id="paper">
+          <img src="/image/paper.png" class ="h-36 w-36 object-cover rounded-full"/>
+        </div>
+        <div class="h-44 w-44 rounded-full flex justify-center items-center hover:bg-blue-700 cursor-pointer" id="scissors">
+          <img src="/image/scissors.png" class ="h-36 w-36 object-cover rounded-full"/>
+        </div>
+      </div>
+
+      <div class="flex justify-center items-center text-4xl mt-12 gap-20">
+        <div class="score">
+          <p class="text-7xl" id="user-score">0</p>
+          <p>You</p>
+        </div>
+        <div class="score">
+          <p class="text-7xl" id="comp-score">0</p>
+          <p>Comp</p>
+        </div>
+      </div>
+
+      <div class="mt-20">
+        <p class="bg-blue-900 text-white text-4xl inline p-4 rounded-xl justify-center" id="msg">Play your move</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
