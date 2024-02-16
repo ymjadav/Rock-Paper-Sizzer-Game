@@ -7,13 +7,22 @@ const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
 const userScorePara = document.querySelector("#user-score");
 const compScorePara = document.querySelector("#comp-score");
+const resetBtn = document.querySelector(".reset-btn");
 
 const generatecomputerchoice = () => {
   const option = ["rock", "paper", "sizzer"];
   const randomindex = Math.floor(Math.random() * 3);
   return option[randomindex];
 };
-
+const resetGame = () => {
+  userscore = 0;
+  compscore = 0;
+  userScorePara.innerText = userscore;
+  compScorePara.innerText = compscore;
+  msg.innerText = `Play your move`;
+  msg.style.backgroundColor = "rgb(30 58 138)";
+  resetBtn.classList.add("hidden");
+};
 const drawGame = () => {
   msg.innerText = "Game was Draw";
   msg.style.backgroundColor = "#081b31";
@@ -55,8 +64,10 @@ choices.forEach((choice) => {
   choice.addEventListener("click", () => {
     const userChoice = choice.getAttribute("id");
     playGame(userChoice);
+    resetBtn.classList.remove("hidden");
   });
 });
+resetBtn.addEventListener("click", resetGame);
 
 // mode.addEventListener("click", () => {
 //   if (currentMode === "light") {
